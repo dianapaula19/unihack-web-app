@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../atoms/Button/Button";
 import CoursesCard from "../../molecules/CourseCard/CourseCard";
 import "./CoursesPage.scss";
 
@@ -31,6 +32,7 @@ const CoursesPage = () => {
                 );
             }
             )}
+            <Button button label = "Add percent"/>
         </div>
     )
 }
