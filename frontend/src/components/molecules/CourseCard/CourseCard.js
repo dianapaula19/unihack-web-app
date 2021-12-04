@@ -10,8 +10,8 @@ const CoursesCard = (props) => {
     return (
         <div className={componentName}>
             <h1>{title}</h1>
-            <h3>{teacher}</h3>
-            <h2>{grade}</h2>
+            <h3>Teacher: {teacher}</h3>
+            <h2>Grade: {grade}</h2>
             <CourseAssignment title="Project" percentage="20%"/>
         </div>
     )

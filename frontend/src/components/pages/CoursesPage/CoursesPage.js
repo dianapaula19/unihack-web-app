@@ -7,7 +7,7 @@ const CoursesPage = () => {
     const componentName = "courses-page";
     const courses = [
         {
-            title: 'Math',
+            title: 'Maths',
             teacher: 'Mr. Smith',
             grade: '9.33'
         },
