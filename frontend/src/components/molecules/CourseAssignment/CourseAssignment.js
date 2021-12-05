@@ -6,13 +6,12 @@ const CourseAssignment = (props) => {
 
     const componentName = "course-assignment";
 
-    const {title, percentage, onClick} = props
+    const {title, percentage} = props
     
     return (
         <div className={componentName}>
             <Text text={title}/>
-            <Text text={percentage} />
-            <button onClick={onClick}>Remove</button>
+            <Text text={`${percentage} %`} />
         </div>
     )
 }

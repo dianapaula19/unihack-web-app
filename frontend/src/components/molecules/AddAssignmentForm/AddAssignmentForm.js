@@ -9,12 +9,13 @@ const AddAssignmentForm = (props) => {
     const componentName = "add-assignment-form";
     const addButtonName = `${componentName}__button--add`;
     const resetButtonName = `${componentName}__button--reset`;
+    
     const [dataAssignment, setDataAssignment] = useState({
         assignmentTitle: '',
         assignmentPercentage: ''
     })
 
-    const { course, teacher, grade } = props;
+    const { course } = props;
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -25,26 +26,26 @@ const AddAssignmentForm = (props) => {
     }
 
     const addAssignment = () => {
-        console.log("Adding an assignment")
-        const data = store.get(course, null);
+
+        const data = store.get(course.title, null);
+
         if (!data) {
             return
         }
-        let assignments = data.assignments;
-        assignments.push({
+
+        const newAssignments = [...data.assignments, {
             title: dataAssignment.assignmentTitle,
             percentage: dataAssignment.assignmentPercentage
-        })
-        const newAssignments = assignments;
-        console.log(newAssignments);
-        store.set(course, {
-            teacher: teacher,
-            grade: grade,
+        }];
+        console.log(data);
+        store.set(course.title, {
+            title: course.title,
+            teacher: course.teacher,
+            grade: course.grade,
             assignments: newAssignments
         });
-    
+
         window.location.reload();
-        
     }
 
     const resetAssignment = () => {

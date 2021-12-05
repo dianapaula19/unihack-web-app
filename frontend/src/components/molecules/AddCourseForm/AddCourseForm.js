@@ -11,6 +11,7 @@ const AddCourseForm = () => {
     const [dataCourse, setDataCourse] = useState({
         courseTitle: '',
         courseTeacher: '',
+        courseGrade: '',
     });
 
     const handleChange = (event) => {
@@ -25,10 +26,10 @@ const AddCourseForm = () => {
     }
 
     const addCourse = () => {
-        console.log("here");
         const data = {
+            title: dataCourse.courseTitle,
             teacher: dataCourse.courseTeacher,
-            grade: 'N/A',
+            grade: dataCourse.courseGrade,
             assignments: []
         };
         store.set(dataCourse.courseTitle, data);
@@ -53,6 +54,14 @@ const AddCourseForm = () => {
                 type="text"
                 placeholder="Teacher"
                 value={dataCourse.courseTeacher}
+                onChange={handleChange}    
+            />
+             <Input
+                id={`${componentName}-grade`}
+                name="courseGrade"
+                type="text"
+                placeholder="Grade"
+                value={dataCourse.courseGrade}
                 onChange={handleChange}    
             />
             <button
