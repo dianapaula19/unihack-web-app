@@ -1,0 +1,33 @@
+.add-assignment-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    &__button--add {
+        width: 100px;
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        &:hover {
+            background-color: darkslategray;
+            color: white;
+            cursor: pointer;
+            
+        }
+    
+    }
+
+    &__button--reset {
+        width: 100px;
+        background-color: white;
+        border: solid lightseagreen 1px;
+        color: lightseagreen;
+        
+        &:hover {
+            background-color: lightseagreen;
+            color: white;
+            cursor: pointer;
+            
+        }
+    }
+}

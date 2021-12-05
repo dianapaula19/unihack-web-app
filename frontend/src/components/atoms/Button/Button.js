@@ -3,12 +3,15 @@ import "./Button.scss"
 
 const Button = (props) => {
 
-    const componentName = "button";
+    const componentName = "unihack-button";
 
-    const {label} = props
+    const {label, onCLick} = props;
     
     return (
-        <button className={componentName}>
+        <button 
+            className={componentName}
+            onClick={onCLick}
+        >
             {label}
         </button>
     )

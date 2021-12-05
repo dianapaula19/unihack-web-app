@@ -1,0 +1,10 @@
+.unihack-input {
+    width: 150px;
+    padding: 5px;
+    border: solid lightseagreen 1px;
+
+    &:focus {
+        border: solid lightseagreen 1px;
+    }
+    
+}

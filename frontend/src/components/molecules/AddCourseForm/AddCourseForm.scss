@@ -1,0 +1,23 @@
+.unihack-add-course-form {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid lightseagreen 1px;
+    padding: 20px;
+    margin: 5px;
+
+    &__button {
+        width: 164px;
+        height: 29px;
+        background-color: lightseagreen;
+        color: white;
+        border: none;
+        &:hover {
+            background-color: darkslategray;
+            color: white;
+            cursor: pointer;
+            
+        }
+    }
+    
+}

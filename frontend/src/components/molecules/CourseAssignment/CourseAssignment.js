@@ -1,16 +1,18 @@
 import React from "react";
+import Text from "../../atoms/Text/Text";
 import "./CourseAssignment.scss"
 
 const CourseAssignment = (props) => {
 
     const componentName = "course-assignment";
 
-    const {title, percentage} = props
+    const {title, percentage, onClick} = props
     
     return (
         <div className={componentName}>
-            <h3>{title}</h3>
-            <h3>{percentage}</h3>
+            <Text text={title}/>
+            <Text text={percentage} />
+            <button onClick={onClick}>Remove</button>
         </div>
     )
 }
