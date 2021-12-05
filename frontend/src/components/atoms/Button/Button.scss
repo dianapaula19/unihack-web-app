@@ -1,4 +1,18 @@
-.unihack-button {
-    padding: 5px;
-    width: 150px;
-}
+.button {
+    background-color: rgb(252, 186, 63);
+    border-radius: 10px;
+    border: solid black;
+    border-width: 2px;
+    color: rgb(0, 0, 0);
+    background: rgb(252, 186, 63);
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    font-style: bold;
+    //margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    margin: 600px;
+  }
