@@ -27,7 +27,6 @@ const AddAssignmentForm = (props) => {
     const addAssignment = () => {
         console.log("Adding an assignment")
         const data = store.get(course, null);
-        console.log(data);
         if (!data) {
             return
         }
@@ -43,6 +42,7 @@ const AddAssignmentForm = (props) => {
             grade: grade,
             assignments: newAssignments
         });
+    
         window.location.reload();
         
     }

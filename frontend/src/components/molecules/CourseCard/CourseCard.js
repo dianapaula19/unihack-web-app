@@ -24,6 +24,7 @@ const CoursesCard = (props) => {
             || !dataCourse.grade 
             || !dataCourse.assignments
         ) {
+            console.log("something");
             const data = store.get(course, {
                 teacher: nullConst,
                 grade: nullConst,
@@ -36,9 +37,7 @@ const CoursesCard = (props) => {
 
 
     const removeAssignment = (index) => {
-        console.log(index);
         const newAssignments = dataCourse.assignments.filter((a, idx) => idx !== index);
-        console.log(newAssignments);
         setDataCourse({
             ...dataCourse,
             assignments: newAssignments

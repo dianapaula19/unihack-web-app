@@ -17,9 +17,9 @@ const CoursesPage = () => {
     return (
         <div className={componentName}>
             { courses && (
-                    courses.map((course) => {
+                    courses.map((course, index) => {
                         return (
-                            <CoursesCard course={course}/> 
+                            <CoursesCard key={index} course={course}/> 
                         );
                         }
                     )
